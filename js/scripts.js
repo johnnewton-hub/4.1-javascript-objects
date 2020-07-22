@@ -53,17 +53,29 @@ class Person {
     this.age     = age;
     this.hobbies = hobbies;
   }
+  // We can add methods to a class, they are like "functions," but are run from objects instead.
+  sayHello ()
+  {
+    // Creating an element.
+    const helloElement = document.createElement( "P" );
+    // Fill in the text of the element (using template literal.)
+    helloElement.textContent = `Hello, my name is ${this.name}!`;
+    // Add the new element to the body of our webpage.
+    document.body.appendChild( helloElement );
+  }
 }
 
 // Let's make some people!
 const sarah = new Person;
 console.log( sarah );
+sarah.sayHello(); // Call upon a method to execute.
 
 // Note when we pass arguments, the default parameters are overwritten.
 const jia = new Person( "Jia Then", 800, ["Sleep", "Cosplay"] );
 console.log( jia );
 jia.height = "7'"; // We /can/ update and add new properties (but should we? Probably not.)
 console.log( jia );
+jia.sayHello();
 
 // Values kept inside an object are considered "properties."
 // Sets of instructions kept inside an object are considered "methods."
