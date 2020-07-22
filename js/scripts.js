@@ -100,6 +100,10 @@ jia.sayHello();
 // Running the birthday method.
 jia.birthday(); // Now she is 801!
 console.log( "Jia is now... " + jia.age + " years old!" );
+// Add some hobbies to Jia's list...
+jia.addHobby( "Programming" );
+jia.addHobby( "Asking Questions" );
+console.log( jia.hobbies ); // Check the hobbies property.
 
 // Values kept inside an object are considered "properties." --> similar to variables.
 // Sets of instructions kept inside an object are considered "methods." --> similar to functions.
