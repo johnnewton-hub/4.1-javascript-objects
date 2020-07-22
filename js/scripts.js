@@ -83,6 +83,23 @@ class Person {
       console.log( "Sorry, empty hobby. Please try again." );
     }
   }
+  // Output the hobbies in the browser (in HTML, not console.)
+  outputListOfHobbies ()
+  {
+    // New list HTMLElement (<ul>)...
+    const hobbyList = document.createElement( "UL" );
+    // Loop, terminating based on the length of our hobbies property (array data-type.)
+    for ( let index = 0; index < this.hobbies.length; index++ ) // index = index + 1
+    { // New list item HTMLElement (<li>)...
+      const hobbyListItem = document.createElement( "LI" );
+      // Add text inside of the HTMLElement.
+      hobbyListItem.textContent = this.hobbies[index]; // Index from our loop! Iterated each time.
+      // Add the populated list item HTMLElement (<li>) to the list HTMLElement (<ul>).
+      hobbyList.appendChild( hobbyListItem );
+    }
+    // Add the whole populated list HTMLElement (<ul>) to the webpage (inside <body>).
+    document.body.appendChild( hobbyList );
+  }
 }
 
 // Let's make some people!
