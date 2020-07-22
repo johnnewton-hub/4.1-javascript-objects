@@ -70,6 +70,19 @@ class Person {
     // !!! typing just "age" would cause JS to look for a variable (that is not here!)
     this.age = this.age + 1;
   }
+  // Method to add a new hobby to our "this.hobbies" array property.
+  addHobby ( hobby = "" ) // Parameter with default value.
+  {
+    // Check if the hobby is filled in.
+    if ( hobby.length > 0 )
+    { // If it IS filled in, push it to the array!
+      this.hobbies.push( hobby );
+    }
+    else
+    { // If it is NOT filled in, say so in the console :(
+      console.log( "Sorry, empty hobby. Please try again." );
+    }
+  }
 }
 
 // Let's make some people!
@@ -88,5 +101,5 @@ jia.sayHello();
 jia.birthday(); // Now she is 801!
 console.log( "Jia is now... " + jia.age + " years old!" );
 
-// Values kept inside an object are considered "properties."
-// Sets of instructions kept inside an object are considered "methods."
+// Values kept inside an object are considered "properties." --> similar to variables.
+// Sets of instructions kept inside an object are considered "methods." --> similar to functions.
