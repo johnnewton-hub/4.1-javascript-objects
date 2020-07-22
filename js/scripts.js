@@ -42,6 +42,11 @@ console.log( validJSONString ); // This can be interpreted by other programming 
  * Class
  * 
  * Classes are like blueprints! We make a guide/definition on what each person will have inside.
+ * 
+ * Values kept inside an object are considered "properties." --> similar to variables.
+ * ---> When accessing properties, the syntax looks like: myObject.property
+ * Sets of instructions kept inside an object are considered "methods." --> similar to functions.
+ * ---> When executing methods, the syntax looks like: myObject.myMethod()
  */
 
 // Start our blueprint with the "class" keyword.
@@ -121,6 +126,5 @@ console.log( "Jia is now... " + jia.age + " years old!" );
 jia.addHobby( "Programming" );
 jia.addHobby( "Asking Questions" );
 console.log( jia.hobbies ); // Check the hobbies property.
-
-// Values kept inside an object are considered "properties." --> similar to variables.
-// Sets of instructions kept inside an object are considered "methods." --> similar to functions.
+// Let's try outputting the hobbies to HTML using our new method...
+jia.outputListOfHobbies();
